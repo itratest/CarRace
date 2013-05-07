@@ -49,6 +49,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtLog = new System.Windows.Forms.TextBox();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.lblServer = new System.Windows.Forms.Label();
+            this.txtIp = new System.Windows.Forms.TextBox();
+            this.btnConnect = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,7 +65,6 @@
             // 
             // tmrPaint
             // 
-            this.tmrPaint.Enabled = true;
             this.tmrPaint.Interval = 25;
             this.tmrPaint.Tick += new System.EventHandler(this.tmrPaint_Tick);
             // 
@@ -266,11 +273,93 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Keys";
             // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(283, 128);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(128, 20);
+            this.txtUser.TabIndex = 23;
+            this.txtUser.Text = "test";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(214, 131);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(63, 13);
+            this.lblName.TabIndex = 22;
+            this.lblName.Text = "User Name:";
+            // 
+            // txtLog
+            // 
+            this.txtLog.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLog.Location = new System.Drawing.Point(217, 154);
+            this.txtLog.Multiline = true;
+            this.txtLog.Name = "txtLog";
+            this.txtLog.ReadOnly = true;
+            this.txtLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtLog.Size = new System.Drawing.Size(275, 282);
+            this.txtLog.TabIndex = 21;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Enabled = false;
+            this.txtMessage.Location = new System.Drawing.Point(217, 444);
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(194, 20);
+            this.txtMessage.TabIndex = 20;
+            // 
+            // btnSend
+            // 
+            this.btnSend.Enabled = false;
+            this.btnSend.Location = new System.Drawing.Point(417, 442);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 23);
+            this.btnSend.TabIndex = 19;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // lblServer
+            // 
+            this.lblServer.AutoSize = true;
+            this.lblServer.Location = new System.Drawing.Point(214, 105);
+            this.lblServer.Name = "lblServer";
+            this.lblServer.Size = new System.Drawing.Size(54, 13);
+            this.lblServer.TabIndex = 18;
+            this.lblServer.Text = "Server IP:";
+            // 
+            // txtIp
+            // 
+            this.txtIp.Location = new System.Drawing.Point(283, 102);
+            this.txtIp.Name = "txtIp";
+            this.txtIp.Size = new System.Drawing.Size(128, 20);
+            this.txtIp.TabIndex = 17;
+            this.txtIp.Text = "127.0.0.1";
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(417, 125);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(75, 23);
+            this.btnConnect.TabIndex = 16;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 537);
+            this.ClientSize = new System.Drawing.Size(709, 537);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtLog);
+            this.Controls.Add(this.txtMessage);
+            this.Controls.Add(this.btnSend);
+            this.Controls.Add(this.lblServer);
+            this.Controls.Add(this.txtIp);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -291,6 +380,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -316,6 +406,14 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Timer tmrPaint;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtLog;
+        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.Label lblServer;
+        private System.Windows.Forms.TextBox txtIp;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 
